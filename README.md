@@ -10,7 +10,7 @@ Which customers drive most of the revenue, which customers are likely to churn, 
 
 ## Dataset
 
-- **Source:** UCI Machine Learning Repository, Online Retail II ([add link here])
+- **Source:** UCI Machine Learning Repository, Online Retail II (https://archive.ics.uci.edu/dataset/502/online+retail+ii)
 - **Size:** 1,067,371 rows across 2 Excel sheets
 - **Period:** 1 Dec 2009 to 9 Dec 2011
 - **Columns:** `Invoice`, `StockCode`, `Description`, `Quantity`, `InvoiceDate`, `Price`, `Customer ID`, `Country`. The first sheet also has a calculated `Sales` column that the second sheet lacks.
