@@ -80,4 +80,4 @@ The raw CSV (`data/raw/`) is not included in the repository because of its size,
 
 ## Author
 
-Jeba Perveen | [LinkedIn link]
+Jeba Perveen
