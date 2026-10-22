@@ -21,7 +21,7 @@ Which customers drive most of the revenue, which customers are likely to churn, 
 |---|---|---|
 | Load data and save raw backup | `01_data_loading_and_raw_backup` | Done |
 | Data quality checks (12 checks and issue log) | `02_data_quality_checks` | Done |
-| Data cleaning | `03_data_cleaning` | In progress |
+| Data cleaning | `03_data_cleaning` | Done |
 | SQL pipeline | `sql/` | Planned |
 | Python analysis (EDA, statistical tests, churn) | `04_...` | Planned |
 | Power BI dashboard | `powerbi/` | Planned |
@@ -52,9 +52,13 @@ Rows are labelled, not deleted, so every row stays traceable. Labels are applied
 | gift_vouchers | 100 |
 | unclear_dcgs | 33 |
 | unclear | 2 |
+Other cleaning steps:
 
+- **Description:** spaces and case standardised, and each StockCode now takes its most frequent Description (617 StockCodes had more than one). Distinct descriptions went from 5,698 to 4,748.
+- **Country:** EIRE, USA and RSA renamed to Ireland, United States and South Africa. Non-country labels such as "Unspecified" are kept as separate categories.
+- **Sales:** the original column existed in one sheet only, so it was dropped and recalculated as Quantity x Price for every row.
+  
 ## Decisions and Assumptions
-
 - Overlap-week rows were removed from the second sheet, because they are identical in both sheets.
 - The 11,812 within-sheet duplicates were **kept**. They are 0.29% of revenue and appear on customer invoices where the same item can plausibly repeat, but the data cannot confirm whether they are errors.
 - Rows without a Customer ID stay in revenue and product analysis and are excluded from customer-level analysis.
