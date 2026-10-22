@@ -52,8 +52,8 @@ Rows are labelled, not deleted, so every row stays traceable. Labels are applied
 | gift_vouchers | 100 |
 | unclear_dcgs | 33 |
 | unclear | 2 |
-Other cleaning steps:
 
+## Other cleaning steps:
 - **Description:** spaces and case standardised, and each StockCode now takes its most frequent Description (617 StockCodes had more than one). Distinct descriptions went from 5,698 to 4,748.
 - **Country:** EIRE, USA and RSA renamed to Ireland, United States and South Africa. Non-country labels such as "Unspecified" are kept as separate categories.
 - **Sales:** the original column existed in one sheet only, so it was dropped and recalculated as Quantity x Price for every row.
