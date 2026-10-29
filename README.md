@@ -22,8 +22,7 @@ Which customers drive most of the revenue, which customers are likely to churn, 
 | Load data and save raw backup | `01_data_loading_and_raw_backup` | Done |
 | Data quality checks (12 checks and issue log) | `02_data_quality_checks` | Done |
 | Data cleaning | `03_data_cleaning` | Done |
-| SQL pipeline | `sql/` | Planned |
-| Python analysis (EDA, statistical tests, churn) | `04_...` | Planned |
+| SQL pipeline | `sql/` | Done |
 | Power BI dashboard | `powerbi/` | Planned |
 
 ## Key Findings So Far
@@ -66,9 +65,12 @@ Rows are labelled, not deleted, so every row stays traceable. Labels are applied
 
 ## Planned Work
 
-- **SQL:** staging tables, cleaning views, CTEs, window functions, stored procedures, historical and incremental loading (simulated on this historical data) and slowly changing dimensions for customer segments.
-- **Python:** EDA, hypothesis testing and churn analysis.
-- **Power BI:** time intelligence, field parameters and incremental refresh.
+- **SQL:** staging tables, cleaning views, CTEs, window functions
+- **Power BI:** time intelligence, field parameters
+
+### Note(SQL)
+**Revenue is concentrated:** the top 10% of active customers (584) bring 63.11% of net revenue, and the bottom half brings about 6.65%. Customers without an ID (about 13% of gross) are not included.
+**Revenue at risk**: 2,569 of 5,832 active customers (44%) have been silent for more than 148 days (the 90th percentile of the gap between purchases). They account for 2.41 million, or 14.67% of net revenue. 462 high-value customers hold 63% of that at-risk revenue, so they are the first priority for win-back.
 
 ## Tools
 
@@ -77,10 +79,10 @@ Python (Pandas), SQL, Power BI
 ## How to Run
 
 1. Download the dataset from the link above and place `online_retail_II.xlsx` in the data folder.
-2. Install the requirements: `pip install pandas openpyxl`
+2. Install the requirements: `pip install pandas`
 3. Run the notebooks in order: `01`, `02`, `03`.
 
-The raw CSV (`data/raw/`) is not included in the repository because of its size, and it is never modified by any notebook.
+The raw CSV is not included in the repository because of its size, and it is never modified by any notebook.
 
 ## Author
 
