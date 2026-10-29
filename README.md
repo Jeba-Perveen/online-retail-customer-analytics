@@ -69,8 +69,8 @@ Rows are labelled, not deleted, so every row stays traceable. Labels are applied
 - **Power BI:** time intelligence, field parameters
 
 ### Note(SQL)
-**Revenue is concentrated:** the top 10% of active customers (584) bring 63.11% of net revenue, and the bottom half brings about 6.65%. Customers without an ID (about 13% of gross) are not included.
-**Revenue at risk**: 2,569 of 5,832 active customers (44%) have been silent for more than 148 days (the 90th percentile of the gap between purchases). They account for 2.41 million, or 14.67% of net revenue. 462 high-value customers hold 63% of that at-risk revenue, so they are the first priority for win-back.
+- **Revenue is concentrated:** the top 10% of active customers (584) bring 63.11% of net revenue, and the bottom half brings about 6.65%. Customers without an ID (about 13% of gross) are not included.
+- **Revenue at risk**: 2,569 of 5,832 active customers (44%) have been silent for more than 148 days (the 90th percentile of the gap between purchases). They account for 2.41 million, or 14.67% of net revenue. 462 high-value customers hold 63% of that at-risk revenue, so they are the first priority for win-back.
 
 ## Tools
 
