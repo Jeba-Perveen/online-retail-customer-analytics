@@ -17,13 +17,13 @@ Which customers drive most of the revenue, which customers are likely to churn, 
 
 ## Project Status
 
-| Stage | Notebook / Folder | Status |
+| Stage | Notebook / Folder |
 |---|---|---|
-| Load data and save raw backup | `01_data_loading_and_raw_backup` | Done |
-| Data quality checks (12 checks and issue log) | `02_data_quality_checks` | Done |
-| Data cleaning | `03_data_cleaning` | Done |
-| SQL pipeline | `sql/` | Done |
-| Power BI dashboard | `powerbi/` | Planned |
+| Load data and save raw backup | `01_data_loading_and_raw_backup` | 
+| Data quality checks (12 checks and issue log) | `02_data_quality_checks` | 
+| Data cleaning | `03_data_cleaning` | 
+| SQL pipeline | `sql/` | 
+| Power BI dashboard | `powerbi/` |
 
 ## Key Findings So Far
 
