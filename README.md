@@ -24,7 +24,7 @@ Which customers drive most of the revenue, which customers are likely to churn, 
 | Power BI dashboard                            | `powerbi/`                       |
 
 
-## Key Findings So Far
+## Key Findings
 
 These come from `02_data_quality_checks`, which documents 12 checks with a finding, impact and planned action for each.
 
@@ -34,6 +34,7 @@ These come from `02_data_quality_checks`, which documents 12 checks with a findi
 - **Non-product rows:** 6,093 rows across 62 StockCodes are charges, adjustments, test entries, gift vouchers or samples. A pattern-based filter also caught real products with non-standard codes (`DCGS...`), which were kept.
 - **Outliers:** The two largest orders (80,995 and 74,215 units) were fully cancelled by the same customer within 12 and 16 minutes. The highest prices belong to non-product codes such as Manual, Bank Charges and Amazon Fee.
 - **Text inconsistencies:** About 20% of Descriptions have a trailing space, and 1,210 of 4,950 StockCodes have more than one Description after cleaning spaces and case.
+- SQL Server’s case-insensitive comparison exposed 170 StockCodes stored in two spellings that Pandas had counted separately (4,896 vs 4,725); fixed in the cleaning notebook
 
 ## Cleaning Approach
 
@@ -52,7 +53,7 @@ Rows are labelled, not deleted, so every row stays traceable. Labels are applied
 | unclear | 2 |
 
 ## Other cleaning steps:
-- **Description:** spaces and case standardised, and each StockCode now takes its most frequent Description (617 StockCodes had more than one). Distinct descriptions went from 5,698 to 4,748.
+- **Description:** spaces and case standardised, and each StockCode now takes its most frequent Description (595 StockCodes had more than one). Distinct descriptions went from 5,698 to 4,738.
 - **Country:** EIRE, USA and RSA renamed to Ireland, United States and South Africa. Non-country labels such as "Unspecified" are kept as separate categories.
 - **Sales:** the original column existed in one sheet only, so it was dropped and recalculated as Quantity x Price for every row.
   
@@ -74,14 +75,6 @@ Rows are labelled, not deleted, so every row stays traceable. Labels are applied
 ## Tools
 
 Python (Pandas), SQL, Power BI
-
-## How to Run
-
-1. Download the dataset from the link above and place `online_retail_II.xlsx` in the data folder.
-2. Install the requirements: `pip install pandas`
-3. Run the notebooks in order: `01`, `02`, `03`.
-
-The raw CSV is not included in the repository because of its size, and it is never modified by any notebook.
 
 ## Author
 
