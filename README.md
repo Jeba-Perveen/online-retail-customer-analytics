@@ -2,8 +2,6 @@
 
 An end-to-end analytics project on real transaction data from a UK online retailer. The work covers data quality auditing, cleaning, a SQL pipeline, Python analysis and a Power BI dashboard.
 
-> **Status: in progress.** Data quality checks are complete and cleaning is underway. The SQL, Python and Power BI stages are planned and are marked as such below.
-
 ## Business Problem
 
 Which customers drive most of the revenue, which customers are likely to churn, and how much revenue is at risk if they do?
